@@ -1,0 +1,21 @@
+.restaurants__container {
+  padding: 0.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.restaurants__container > h1 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.restaurants__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}

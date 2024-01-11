@@ -1,0 +1,33 @@
+.info-model {
+  background: #f9fafa;
+  padding: 24px 0 32px;
+}
+
+.info-model--heading {
+  color: var(--text-heading);
+  margin: 1rem;
+}
+.info-model--heading:first-child {
+  margin: 0 1rem 1rem;
+}
+
+.tossed-deliveroo-content {
+  padding: 1rem;
+  background-color: var(--bg-white);
+  font-size: 14px;
+  line-height: 19px;
+  border: 1px solid #00000014;
+}
+
+.tossed-deliveroo--action {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary-color);
+  border-top: 1px solid #00000014;
+  font-size: 16px;
+  line-height: 22px;
+}

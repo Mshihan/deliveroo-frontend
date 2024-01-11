@@ -1,0 +1,25 @@
+.model__card {
+  background: var(--bg-white);
+  max-width: 560px;
+  width: 560px;
+
+  max-height: calc(100vh - 64px);
+  /* margin: 32px; */
+}
+.model__card--header {
+  padding: 1rem;
+  position: relative;
+  border-color: rgba(3, 3, 3, 0.356);
+}
+.model__card--heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 1rem;
+  border: none;
+  background: transparent;
+}

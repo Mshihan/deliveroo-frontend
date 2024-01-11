@@ -1,0 +1,166 @@
+.login__content {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 16px;
+}
+
+.login__content--header {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--text-heading);
+  padding-bottom: 1.5rem;
+}
+
+.login__social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.login__social--google,
+.login__social--facebook,
+.login__social--apple,
+.login__local,
+.login__local--button,
+.login__local--forgot-password {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border-radius: 4px;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: none;
+  gap: 0.5rem;
+  border: none;
+}
+
+.login__social--facebook {
+  background-color: #4c69ba;
+  color: #fff;
+}
+
+.login__social--google {
+  border: 1px solid #a3afaf;
+  background-color: var(--bg-white);
+  color: var(--text-heading);
+}
+
+.login__social--apple {
+  background: #191919;
+  color: var(--bg-white);
+}
+
+.or__divider {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.or__divider > .divider {
+  height: 1px;
+  background: #8c9b9b;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.login--icons {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.login__local,
+.login__local--button {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  cursor: pointer;
+}
+
+.login__description {
+  padding-top: 1rem;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--text-body);
+}
+
+.login__description a {
+  color: var(--primary-color);
+}
+
+.login__local--container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+.text-field__label {
+  margin-bottom: 0.5rem;
+}
+
+.text-field__input {
+  outline: none;
+  webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: plex-sans;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 48px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  caret-color: #00ccbc;
+  padding: 12px 16px;
+  border: 1px solid #e8ebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 100px #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), inset 0 0 0 100px #fff;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.text-field__input:focus {
+  outline: 2px solid var(--text-heading);
+}
+
+.text-field__input::placeholder {
+  color: var(--text-body);
+}
+
+.login__local--forgot-password {
+  font-weight: normal;
+  background: var(--bg-white);
+  border: 1px solid #e8ebeb;
+  color: var(--primary-color);
+}

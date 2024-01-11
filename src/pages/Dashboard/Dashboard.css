@@ -1,0 +1,23 @@
+.dashboard__container {
+  min-height: calc(100vh - 72px);
+  padding: 0.6rem 1.5rem;
+}
+
+.dashboard__container > h1 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.action-button {
+  margin-top: 10px;
+  border: none;
+  padding: 0.2rem 0.5rem;
+
+  border-radius: 4px;
+  color: var(--text-heading);
+  display: flex;
+  align-items: center;
+}

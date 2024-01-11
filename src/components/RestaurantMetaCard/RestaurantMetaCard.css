@@ -1,0 +1,34 @@
+.restaurant__card {
+  width: 100%;
+}
+
+.restaurant-meta {
+  margin-top: 1rem;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+/* .restaurant-content__content__info--leading-icon {
+} */
+
+.restaurant-meta--box {
+  font-family: 'IBM Plex Sans';
+}
+
+.restaurant-meta--box h6 {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 22px;
+  color: var(--text-heading);
+  text-align: left;
+}
+
+.restaurant-meta--box p {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}

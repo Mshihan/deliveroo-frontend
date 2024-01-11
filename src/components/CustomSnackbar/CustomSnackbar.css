@@ -1,0 +1,7 @@
+.error__text {
+  margin-top: 0.25rem;
+  font-size: 14px;
+  line-height: 19px;
+  color: red;
+  opacity: 0.5;
+}

@@ -1,0 +1,53 @@
+.inventory {
+  background: var(--bg-background);
+  min-height: 500px;
+  padding: 0rem 1.6rem;
+  padding-bottom: 24px;
+  display: flex;
+}
+
+.inventory-content {
+  width: 70%;
+  padding-right: 1rem;
+}
+
+.inventory-text {
+  font-size: 0.875rem;
+  line-height: 19px;
+  color: var(--text-body);
+}
+
+.inventory-category,
+.popular-category {
+  padding-top: 2rem;
+}
+
+.inventory-category:last-child {
+  padding-bottom: 2rem;
+}
+
+.inventory-category > h3,
+.popular-category > h3 {
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+  font-weight: bold;
+}
+
+.inventory-category__items {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cart {
+  width: 30%;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 1rem;
+}
