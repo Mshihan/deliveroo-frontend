@@ -5,10 +5,22 @@
   flex-direction: column;
 }
 
+@media (max-width: 539px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
 .sidebar-heading {
   padding: 1.2rem 1.6rem;
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 539px) {
+  .sidebar-heading {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .sidebar-heading__content {

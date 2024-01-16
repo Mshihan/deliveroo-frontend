@@ -1,24 +1,23 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { ThunkDispatch } from 'redux-thunk'
 import * as Yup from 'yup'
+import CustomBackdrop from '../../components/CustomBackdrop/CustomBackdrop'
+import CustomSnackbar from '../../components/CustomSnackbar/CustomSnackbar'
 import {
   AppleLogo,
   EmailIcon,
   Facebook,
   GoogleLogo,
 } from '../../components/Icons/Icons'
+import { isTokenExpired } from '../../helpers/checkToken'
+import { AuthSliceInterface } from '../../redux/interfaces/redux-types'
+import { loginThunk } from '../../redux/slices/authSlice'
 import './Login.css'
 import { initialLoginValues } from './data/initialLoginValues'
 import { LoginCredentials, LoginStateInterface } from './interfaces'
-import { loginThunk } from '../../redux/slices/authSlice'
-import { ThunkDispatch } from 'redux-thunk'
-import { Alert, Backdrop, CircularProgress, Snackbar } from '@mui/material'
-import { AuthSliceInterface } from '../../redux/interfaces/redux-types'
-import { isTokenExpired } from '../../helpers/checkToken'
-import { useNavigate } from 'react-router-dom'
-import CustomSnackbar from '../../components/CustomSnackbar/CustomSnackbar'
-import CustomBackdrop from '../../components/CustomBackdrop/CustomBackdrop'
 
 const loginState: LoginStateInterface = {
   loginSocial: 1,
@@ -61,11 +60,11 @@ const Login = () => {
         setShowLoader(true)
         setTimeout(() => {
           setShowLoader(false)
-          navigate('/')
+          navigate(-1)
         }, 1500)
       }
     }
-  }, [token])
+  }, [token, navigate])
 
   const handleGoogle = () =>
     window.open('http://localhost:4000/api/auth/google', '_self')

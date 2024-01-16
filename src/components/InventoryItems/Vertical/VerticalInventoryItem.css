@@ -1,20 +1,19 @@
 .vertical-item {
-  width: 123px !important;
   box-shadow: 0 1px 4px #00000014;
   border-radius: 4px;
   overflow: hidden;
-  height: 289px;
-  margin-bottom: 0.5rem;
+  height: 100%;
+  margin: 0 0 0.5rem 0;
   cursor: pointer;
   flex-shrink: 0;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .vertical-item:hover {
 }
 
 .vertical-item--image {
-  width: 100%;
+  width: 123px;
   height: 123px;
 }
 
@@ -32,6 +31,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 8px;
+  width: 123px;
   height: calc(289px - 123px);
 }
 

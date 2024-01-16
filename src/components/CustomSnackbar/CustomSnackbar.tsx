@@ -3,15 +3,7 @@ import './CustomSnackbar.css'
 import { CustomSnackbarProp } from './interface'
 
 const CustomSnackbar = (props: CustomSnackbarProp) => {
-  const {
-    open,
-    onClose,
-    message,
-    background,
-    severity,
-    bottom = false,
-    left = false,
-  } = props
+  const { open, onClose, message, background, severity, bottom = false } = props
   return (
     <Snackbar
       open={open}

@@ -1,10 +1,9 @@
 .model__card {
   background: var(--bg-white);
   max-width: 560px;
-  width: 560px;
-
   max-height: calc(100vh - 64px);
-  /* margin: 32px; */
+  display: flex;
+  flex-direction: column;
 }
 .model__card--header {
   padding: 1rem;
@@ -22,4 +21,11 @@
   right: 1rem;
   border: none;
   background: transparent;
+}
+
+@media (max-width: 539px) {
+  .model__card {
+    height: 100vh;
+    max-height: 100%;
+  }
 }

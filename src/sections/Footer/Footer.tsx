@@ -1,8 +1,9 @@
 import { IconButton } from '@mui/material'
-import './Footer.css'
-import { Facebook, Instagram, Twitter } from '../../components/Icons/Icons'
 import AppStoreDownload from '../../assets/icons/app-store.png'
 import PlayStoreDownload from '../../assets/icons/play-store.png'
+import { Facebook, Instagram, Twitter } from '../../components/Icons/Icons'
+import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -11,50 +12,50 @@ const Footer = () => {
         <div className="footer-card">
           <h3>Discover Deliveroo</h3>
           <div className="links">
-            <a href="#">Investors</a>
-            <a href="#">About us</a>
-            <a href="#">Takeaway</a>
-            <a href="#">More</a>
-            <a href="#">Newsroom</a>
-            <a href="#">Engineering Blog</a>
-            <a href="#">Design Blog</a>
-            <a href="#">Gift Cards</a>
-            <a href="#">Deliveroo Students</a>
-            <a href="#">Careers</a>
-            <a href="#">Restaurant signup</a>
-            <a href="#">Become a rider</a>
+            <Link to="/">Investors</Link>
+            <Link to="/">About us</Link>
+            <Link to="/">Takeaway</Link>
+            <Link to="/">More</Link>
+            <Link to="/">Newsroom</Link>
+            <Link to="/">Engineering Blog</Link>
+            <Link to="/">Design Blog</Link>
+            <Link to="/">Gift Cards</Link>
+            <Link to="/">Deliveroo Students</Link>
+            <Link to="/">Careers</Link>
+            <Link to="/">Restaurant signup</Link>
+            <Link to="/">Become a rider</Link>
           </div>
         </div>
         <div className="footer-card">
           <h3>Legal</h3>
           <div className="links">
-            <a href="#">Terms and conditions</a>
-            <a href="#">Privacy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Modern Slavery Statement</a>
-            <a href="#">Tax Strategy</a>
-            <a href="#">Section 172 Statement</a>
-            <a href="#">Public Authority Requests</a>
+            <Link to="/">Terms and conditions</Link>
+            <Link to="/">Privacy</Link>
+            <Link to="/">Cookies</Link>
+            <Link to="/">Modern Slavery Statement</Link>
+            <Link to="/">Tax Strategy</Link>
+            <Link to="/">Section 172 Statement</Link>
+            <Link to="/">Public Authority Requests</Link>
           </div>
         </div>
         <div className="footer-card">
           <h3>Help</h3>
           <div className="links">
-            <a href="#">Contact</a>
-            <a href="#">FAQs</a>
-            <a href="#">Cuisines</a>
-            <a href="#">Brands</a>
+            <Link to="/">Contact</Link>
+            <Link to="/">FAQs</Link>
+            <Link to="/">Cuisines</Link>
+            <Link to="/">Brands</Link>
           </div>
         </div>
         <div className="footer-card">
           <h3>Take Deliveroo with you</h3>
           <div className="links">
-            <a href="#">
+            <Link to="/">
               <img src={AppStoreDownload} alt="download from app store" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/">
               <img src={PlayStoreDownload} alt="download from google play" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

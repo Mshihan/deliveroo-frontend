@@ -1,11 +1,11 @@
-import { MenuItem, Select, SvgIcon, selectClasses } from '@mui/material'
+import { MenuItem, Select } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import { MdClose, MdCode, MdInfoOutline } from 'react-icons/md'
+import { MdClose, MdInfoOutline } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 import BrandLogo from '../../assets/icons/logo.svg'
 import FilledButton from '../FilledButton/FilledButton'
-import './Sidebar.css'
 import { DropdownIcon } from '../Icons/Icons'
-import { useNavigate } from 'react-router-dom'
+import './Sidebar.css'
 
 const CustomizedSelect = styled(Select)(() => ({
   '&.MuiOutlinedInput-root': {

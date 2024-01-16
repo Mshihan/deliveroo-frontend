@@ -9,7 +9,7 @@ const RestaurantCard = (props: RestaurantInterface) => {
   const { id, title, photo } = props
   return (
     <Link to={`/restaurant/${id}`} style={{ textDecoration: 'none' }}>
-      <Card sx={{ width: '100%' }}>
+      <Card sx={{ width: '100%', height: '100%' }}>
         <CardActionArea>
           <CardMedia
             component="img"

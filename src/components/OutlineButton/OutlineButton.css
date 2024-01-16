@@ -10,7 +10,8 @@
   color: #2e3333;
   align-items: center;
   border: 1px solid #e8ebeb;
-  gap: 10px;
+  gap: 0.5rem;
+  height: 40px;
 }
 
 .outline-button:hover {
@@ -21,6 +22,6 @@
   color: var(--text-heading);
   font-size: 16px;
   line-height: 22px;
-  font-family: 'IBM Plex Sans';
+  font-family: 'IBM Plex Sans', sans-serif;
   text-decoration: none;
 }

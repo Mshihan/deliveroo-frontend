@@ -1,18 +1,27 @@
-import { Dialog, Modal } from '@mui/material'
-import './DialogModel.css'
+import { Dialog } from '@mui/material'
 import { Close } from '../Icons/Icons'
+import './DialogModel.css'
 
 interface DialogModelTypes {
   open: boolean
   handleClose: () => void
   heading: string
+  windowWidth: number
   children: JSX.Element | JSX.Element[]
 }
 
 const DialogModel = (props: DialogModelTypes) => {
-  const { open, handleClose, heading } = props
+  const { open, handleClose, heading, windowWidth } = props
+
+  const mobile: boolean = windowWidth < 540
+
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      className="dialog-container"
+      fullScreen={mobile}
+    >
       <div className="model__card">
         <div className="model__card--header">
           <div className="model__card--heading">{heading}</div>

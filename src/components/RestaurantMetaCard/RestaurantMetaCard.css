@@ -6,14 +6,20 @@
   margin-top: 1rem;
   border: none;
   background: transparent;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
 }
 
-/* .restaurant-content__content__info--leading-icon {
-} */
+.restaurant-meta__content {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .restaurant-meta--box {
   font-family: 'IBM Plex Sans';
@@ -29,6 +35,13 @@
 
 .restaurant-meta--box p {
   color: var(--text-body);
-  font-size: 0.9rem;
-  line-height: 1.1rem;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@media (max-width: 539px) {
+  .restaurant-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

@@ -3,6 +3,12 @@
   padding: 24px 0 32px;
 }
 
+@media (max-width: 539px) {
+  .info-model {
+    height: 100%;
+  }
+}
+
 .info-model--heading {
   color: var(--text-heading);
   margin: 1rem;

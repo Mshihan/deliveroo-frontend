@@ -1,5 +1,5 @@
-import './InfoModalContent.css'
 import { Phone, World } from '../Icons/Icons'
+import './InfoModalContent.css'
 import { InfoModalContentProps } from './interface'
 
 const InfoModalContent = (props: InfoModalContentProps) => {

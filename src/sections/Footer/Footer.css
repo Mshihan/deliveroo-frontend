@@ -1,7 +1,7 @@
 .footer {
   background: var(--text-heading);
   min-height: 300px;
-  padding: 2rem;
+  padding: 1.5rem 0;
 }
 
 .footer-card-container {
@@ -85,4 +85,27 @@
 
 .footer__instagram:hover {
   fill: #f00075 !important;
+}
+
+@media (max-width: 1100px) {
+  .more-info {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .footer-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 539px) {
+  .footer-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+  }
 }

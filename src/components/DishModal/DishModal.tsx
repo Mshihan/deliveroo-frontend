@@ -1,22 +1,22 @@
-import { Dialog } from '@mui/material'
-import { Close, OutlineAdd, OutlineDash } from '../Icons/Icons'
-import './DishModal.css'
-import { Checkbox } from '@mui/material'
-import DishImage from '../../assets/images/dish.webp'
-import { Dish } from '../../redux/interfaces/redux-types'
+import { Checkbox, Dialog } from '@mui/material'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../../redux/slices/cartSlice'
 import { useNavigate } from 'react-router-dom'
+import DishImage from '../../assets/images/dish.webp'
+import { Dish } from '../../redux/interfaces/redux-types'
+import { addItem } from '../../redux/slices/cartSlice'
+import { Close, OutlineAdd, OutlineDash } from '../Icons/Icons'
+import './DishModal.css'
 
 interface DialogModelTypes {
   open: boolean
   handleClose: () => void
   dish?: Dish
+  windowWidth: number
 }
 
 const DishModal = (props: DialogModelTypes) => {
-  const { open, handleClose, dish } = props
+  const { open, handleClose, dish, windowWidth } = props
   const [quantity, setQuantity] = useState<number>(1)
 
   const toggleQuantity = (add: boolean) => {
@@ -42,8 +42,10 @@ const DishModal = (props: DialogModelTypes) => {
     handleClose()
   }
 
+  const mobile: boolean = windowWidth < 540
+
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} fullScreen={mobile}>
       <div className="dish-model__card">
         <div className="model__content">
           <div className="dish-model">

@@ -1,13 +1,12 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Dashboard from './pages/Dashboard/Dashboard'
 import Login from './pages/Login/Login'
+import NotFound from './pages/NotFound/NotFound'
 import Restaurant from './pages/Restaurant/Restaurant'
 import Restaurants from './pages/Restaurants/Restaurants'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Footer from './sections/Footer/Footer'
 import Header from './sections/Header/Header'
-import Dashboard from './pages/Dashboard/Dashboard'
-import { Link } from 'react-router-dom'
-import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   return (

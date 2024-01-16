@@ -4,8 +4,8 @@ import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-quartz.css'
 import { AgGridReact } from 'ag-grid-react'
 import { useMemo, useState } from 'react'
-import './Dashboard.css'
 import { FiCheck, FiEye } from 'react-icons/fi'
+import './Dashboard.css'
 
 // Row Data Interface
 interface IRow {

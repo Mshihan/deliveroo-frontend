@@ -1,11 +1,17 @@
 .restaurants__container {
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 4rem;
   display: flex;
   flex-direction: column;
   font-family: 'IBM Plex Sans', sans-serif;
+  align-items: center;
 }
 
-.restaurants__container > h1 {
+.restaurants__container__wrap {
+  max-width: 1920px;
+  width: 100%;
+}
+
+.restaurants__container__wrap > h3 {
   font-size: 22px;
   line-height: 28px;
   font-weight: 700;
@@ -16,6 +22,34 @@
 .restaurants__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 1439px) {
+  .restaurants__container {
+    padding: 0.815rem 1.5rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .restaurants__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 539px) {
+  .restaurants__list {
+    grid-template-columns: 1fr;
+  }
+  .restaurants__container {
+    padding: 0.815rem 1rem;
+  }
+
+  .restaurants__container__wrap > h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

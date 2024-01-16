@@ -1,11 +1,17 @@
 .dish-model__card {
   background: var(--bg-white);
   max-width: 560px;
-  width: 560px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: calc(100vh - 64px);
+}
+
+@media (max-width: 539px) {
+  .dish-model__card {
+    height: 100vh;
+  }
 }
 
 .model__content {

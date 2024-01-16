@@ -26,9 +26,12 @@ const HorizontalInventoryItem = (props: {
       <OutlineButton
         style={{
           height: '100px',
-          width: '40px',
+          width: '40px !important',
+          flexShrink: '0',
           padding: '0 .4rem',
           marginLeft: '1rem',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <Add style={{ fill: '#00ccbc', height: '18px', width: '18px' }} />

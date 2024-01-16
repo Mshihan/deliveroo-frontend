@@ -14,6 +14,7 @@ import CustomBackdrop from '../CustomBackdrop/CustomBackdrop'
 import {
   Add,
   Cart as CartIcon,
+  Close,
   InfoIcon,
   OutlineAdd,
   OutlineDash,
@@ -22,7 +23,9 @@ import OutlineButton from '../OutlineButton/OutlineButton'
 import './Cart.css'
 import { calculateSubtotal, convertToOrderItems } from './helper'
 
-const Cart = () => {
+const Cart = (props: { toggleDrawer: () => void }) => {
+  const { toggleDrawer } = props
+
   // Navigate hook
   const navigate = useNavigate()
 
@@ -75,7 +78,14 @@ const Cart = () => {
       <CustomBackdrop show={loading} />
 
       <div className="cart__card--content">
-        <h3 className="cart__header">Your order</h3>
+        <div className="cart__header__container">
+          <h3 className="cart__header">Your order</h3>{' '}
+          <Close
+            style={{ height: '24px', width: '24px', color: '#00ccbc' }}
+            className="cart__container__close--mobile"
+            onClick={toggleDrawer}
+          />
+        </div>
 
         <div className="cart__item--list">
           {items.map((item) => (
@@ -117,7 +127,7 @@ const Cart = () => {
             <SuggesionCard image="https://rs-menus-api.roocdn.com/images/f6c2b5ae-b1a4-4151-aa9c-3c313d69c6ff/image.jpeg?width=84&height=160&auto=webp&format=jpg&fit=crop" />
           </CarouselComponent> */}
 
-          <div className="horizontal-scroll ">
+          <div className="horizontal-scroll">
             <SuggesionCard image="https://rs-menus-api.roocdn.com/images/fa2c0778-54a5-4ed3-904d-4e96d839e524/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop" />
             <SuggesionCard image="https://rs-menus-api.roocdn.com/images/f6c2b5ae-b1a4-4151-aa9c-3c313d69c6ff/image.jpeg?width=84&height=160&auto=webp&format=jpg&fit=crop" />
             <SuggesionCard image="https://rs-menus-api.roocdn.com/images/fa2c0778-54a5-4ed3-904d-4e96d839e524/image.jpeg?width=560&height=315&auto=webp&format=jpg&fit=crop" />
@@ -153,9 +163,6 @@ const Cart = () => {
           </div>
           <div className="delivery--free">Spend $15+ to get free delivery</div>
         </div>
-
-        <p className="fees-summary">How fees work</p>
-
         <div className="total-container">
           <div className="total-container--list">
             <div className="flex-between-center">
@@ -177,6 +184,30 @@ const Cart = () => {
               <p>Total</p>
               <p>${subtotal.toFixed(2)}</p>
             </div>
+          </div>
+        </div>
+        <p className="fees-summary">How fees work</p>
+      </div>
+      <div className="total-container--mobile">
+        <div className="total-container--list">
+          <div className="flex-between-center">
+            <p className="cart__item--name">Rider tip</p>
+            <div className="cart__item--price-container">
+              <div className="cart__item--toggler">
+                <OutlineDash
+                  style={{ color: '#00ccbc', height: '18px', width: '18px' }}
+                />
+                <OutlineAdd
+                  style={{ color: '#00ccbc', height: '18px', width: '18px' }}
+                />
+              </div>
+              <p className="cart__item--price">$0.00</p>
+            </div>
+          </div>
+
+          <div className="flex-between-center cart__item--total ">
+            <p>Total</p>
+            <p>${subtotal.toFixed(2)}</p>
           </div>
         </div>
       </div>

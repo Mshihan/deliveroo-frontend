@@ -21,30 +21,32 @@ const Restaurants = () => {
 
   return (
     <div className="restaurants__container">
-      <CustomBackdrop show={loading} />
-      <h1>Restaurants</h1>
-      <div className="restaurants__list">
-        {!loading &&
-          restaurants.length > 0 &&
-          restaurants?.map((restaurant) => (
-            <RestaurantCard
-              key={restaurant.id}
-              title={restaurant.name}
-              id={restaurant.id}
-              photo={restaurant.photo}
-            />
-          ))}
+      <div className="restaurants__container__wrap">
+        <CustomBackdrop show={loading} />
+        <h3>Restaurants</h3>
+        <div className="restaurants__list">
+          {!loading &&
+            restaurants.length > 0 &&
+            restaurants?.map((restaurant) => (
+              <RestaurantCard
+                key={restaurant.id}
+                title={restaurant.name}
+                id={restaurant.id}
+                photo={restaurant.photo}
+              />
+            ))}
 
-        {loading &&
-          [1, 2, 3, 4].map((item) => (
-            <Skeleton
-              key={item}
-              variant="rectangular"
-              width="100%"
-              height="100%"
-              style={{ borderRadius: '4px' }}
-            />
-          ))}
+          {loading &&
+            [1, 2, 3, 4].map((item) => (
+              <Skeleton
+                key={item}
+                variant="rectangular"
+                width="100%"
+                height="100%"
+                style={{ borderRadius: '4px' }}
+              />
+            ))}
+        </div>
       </div>
     </div>
   )

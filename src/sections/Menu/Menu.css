@@ -1,24 +1,33 @@
 .menu {
-  padding: 1.5rem 1.6rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   font-family: 'IBM Plex Sans', sans-serif;
   margin-bottom: 2rem;
   background-color: var(--bg-white);
   border-bottom: 1px solid #00000014;
-  box-shadow: 0 4px 4px #0000000d;
+  box-shadow: 0 2px 4px #0000000d;
   z-index: 4;
   position: sticky;
   top: 71.6px;
-
   overflow-x: hidden;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .menu-container {
   display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1920px;
+  padding: 1.6rem 0;
 }
 
 .menu-list {
+  flex-grow: 1;
+  width: 100%;
   list-style: none;
+  overflow: hidden;
   display: flex;
 }
 
@@ -30,6 +39,7 @@
 .menu-list__item a,
 .show-more {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   border: none;
   border-radius: 16px;
@@ -44,7 +54,8 @@
   color: var(--primary-color);
 }
 
-.menu-list .active {
+.menu-list .active,
+.menu-list-mobile .active {
   font-weight: 600;
   background: #00ccbc;
   color: white;
@@ -52,4 +63,77 @@
 
 .hidden {
   visibility: hidden;
+  width: none;
+}
+
+.hidden > .menu-list__item {
+  display: none;
+}
+
+.show-more {
+  padding-right: 0;
+}
+
+.menu-list__show-more {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1439px) {
+  .menu {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .menu {
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .menu {
+    top: 55.6px;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .menu-container {
+    width: 100vw;
+    padding: 1.6rem 0;
+  }
+
+  .menu-list {
+    overflow-x: scroll;
+    width: 100vw;
+    display: none;
+  }
+
+  .menu-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-list__show-more {
+    display: none;
+  }
+
+  .menu-list-mobile {
+    flex-grow: 1;
+    width: 100vw;
+    list-style: none;
+    overflow: scroll;
+    display: flex;
+    padding: 0 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .menu-list-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-list-mobile::-webkit-scrollbar {
+    display: none;
+  }
 }

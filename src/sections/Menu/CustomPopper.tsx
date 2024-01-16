@@ -6,8 +6,8 @@ import {
   Popper,
 } from '@mui/material'
 import { Link } from 'react-scroll'
-import { MenuItem } from './interface'
 import './Menu.css'
+import { MenuItem } from './interface'
 
 interface CustomPopperProps {
   open: boolean
@@ -53,6 +53,7 @@ const CustomPopper: React.FC<CustomPopperProps> = ({
                   <MaterialMenuItem className="" onClick={handleClose}>
                     <li
                       className="menu-list__item"
+                      style={{ width: '100%' }}
                       id={`menuitem-${category.id}`}
                     >
                       <Link
